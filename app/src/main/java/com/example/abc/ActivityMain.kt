@@ -5,6 +5,7 @@ import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import androidx.localbroadcastmanager.content.LocalBroadcastManager
 import com.example.abc.config.BatteryLevelReceiver
 import com.example.abc.fragments.mainBottom.FragmentABC
 import com.example.abc.fragments.mainBottom.FragmentStart
@@ -21,10 +22,6 @@ class ActivityMain : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         val navigation = findViewById<BottomNavigationView>(R.id.activity_main_bnv_navigation)
         navigation.setOnNavigationItemSelectedListener(this)
 
-        val intentFilter = IntentFilter(Intent.ACTION_BATTERY_LOW)
-        batteryReceiver = BatteryLevelReceiver()
-        registerReceiver(batteryReceiver, intentFilter)
-
         // default home fragment view
         supportFragmentManager
             .beginTransaction()
@@ -36,6 +33,13 @@ class ActivityMain : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
         //default home selected in bottom menu
         navigation.menu.findItem(R.id.action_start).isChecked = true
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val intentFilter = IntentFilter(Intent.ACTION_BATTERY_LOW)
+        batteryReceiver = BatteryLevelReceiver()
+        registerReceiver(batteryReceiver, intentFilter)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -65,8 +69,8 @@ class ActivityMain : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         return true
     }
 
-    override fun onStop() {
-        super.onStop()
+    override fun onPause() {
+        super.onPause()
         unregisterReceiver(batteryReceiver)
     }
 

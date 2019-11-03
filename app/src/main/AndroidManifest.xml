@@ -17,21 +17,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ActivityLogin">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".SplashScreenActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".ActivityMain" />
-        <activity android:name=".ActivityEditName" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
-        <receiver android:name="config.BatteryLevelReceiver">
-            <intent-filter>
-                <action android:name="android.intent.action.BATTERY_LOW" />
-            </intent-filter>
-        </receiver>
-    </application>
+    <activity android:name=".ActivityMain" />
+    <activity android:name=".ActivityEditName" />
 
-</manifest>
+    <receiver android:name="config.BatteryLevelReceiver">
+        <intent-filter>
+            <action android:name="android.intent.action.BATTERY_LOW" />
+        </intent-filter>
+    </receiver>
+</application>
+
+    </manifest>
