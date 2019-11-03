@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ABC</string>
+    <string name="email">Correo</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="password">Contraseña</string>
+    <string name="materials">Materiales</string>
+    <string name="start">Inicio</string>
+    <string name="abc">ABC</string>
+    <string name="enterprise_name">ABC</string>
+    <string name="enterprise_schedule">Horarios: Lun. - Vie. 8:00 - 18:00 hrs</string>
+    <string name="enterprise_location">Te esperamos en Av Mariano Otero, Moderna, 44190 Guadalajara, Jal.</string>
+    <string name="enterprise_telephone">Teléfono: 33 3118 3219</string>
+    <string name="enterprise_email">Email: is688178@gmail.com</string>
+    <string name="welcome_message">Hola Cliente, en la compañía ABC, eres muy importante para nosotros</string>
+    <string name="edit_client_name">Cambiar nombre</string>
+    <string name="client_name_hint">Su nombre</string>
+    <string name="finish">Listo</string>
+    <string name="save">Guardar</string>
 </resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragment_main_abc_name"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread"
+        android:text="@string/enterprise_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_main_abc_schedule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragment_main_abc_schedule"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/enterprise_schedule"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_main_abc_name"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_main_abc_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragment_main_abc_location"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        android:text="@string/enterprise_location"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_main_abc_schedule"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_main_abc_telephone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragment_main_abc_telephone"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        android:text="@string/enterprise_telephone"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_main_abc_location"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_main_abc_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fragment_main_abc_email"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        android:text="@string/enterprise_email"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_main_abc_telephone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
