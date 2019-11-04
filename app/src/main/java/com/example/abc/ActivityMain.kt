@@ -51,6 +51,7 @@ class ActivityMain : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                     FragmentMaterials()
                 )
                 .commit()
+
             R.id.action_start -> supportFragmentManager
                 .beginTransaction()
                 .replace(
@@ -58,6 +59,7 @@ class ActivityMain : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                     FragmentStart()
                 )
                 .commit()
+
             R.id.action_abc -> supportFragmentManager
                 .beginTransaction()
                 .replace(

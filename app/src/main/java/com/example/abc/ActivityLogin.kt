@@ -28,12 +28,12 @@ class ActivityLogin : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         //Check for current session
-        val sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE)
+        val sharedPreferences = getSharedPreferences(SHARED_PREFERENCES, Context.MODE_PRIVATE) //"com.eventime.SHARED_PREFERENCES"
         val sessionId = sharedPreferences.getString(SESSION_ID_KEY, "")
 
         if (sessionId != "") {
             val intent = Intent(this, ActivityMain::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
             finish()
         }
